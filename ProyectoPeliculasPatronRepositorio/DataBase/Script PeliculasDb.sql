@@ -13,5 +13,5 @@ create table Peliculas(
 PeliculaId int identity(1,1) primary key,
 Estreno date,
 Descripcion varchar(50),
-Categoria varchar(50),
+CategoriaId int,
 );

@@ -68,14 +68,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\PeliculasDb.cs" />
+    <Compile Include="DAL\Repositorio.cs" />
+    <Compile Include="Entidades\Categoria.cs" />
+    <Compile Include="Entidades\Pelicula.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="PeliculasDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PeliculasDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\FrmConsultaCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\FrmConsultaCategorias.Designer.cs">
+      <DependentUpon>FrmConsultaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\FrmConsultaPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\FrmConsultaPeliculas.Designer.cs">
+      <DependentUpon>FrmConsultaPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\FrmConsultaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\FrmConsultaUsuarios.Designer.cs">
+      <DependentUpon>FrmConsultaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\FrmRegistroCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\FrmRegistroCategorias.Designer.cs">
+      <DependentUpon>FrmRegistroCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\FrmRegistroPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\FrmRegistroPeliculas.Designer.cs">
+      <DependentUpon>FrmRegistroPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\FrmRegistroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\FrmRegistroUsuarios.Designer.cs">
+      <DependentUpon>FrmRegistroUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,8 +135,37 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\FrmConsultaCategorias.resx">
+      <DependentUpon>FrmConsultaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\FrmConsultaPeliculas.resx">
+      <DependentUpon>FrmConsultaPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\FrmConsultaUsuarios.resx">
+      <DependentUpon>FrmConsultaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\FrmRegistroCategorias.resx">
+      <DependentUpon>FrmRegistroCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\FrmRegistroPeliculas.resx">
+      <DependentUpon>FrmRegistroPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\FrmRegistroUsuarios.resx">
+      <DependentUpon>FrmRegistroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="PeliculasDbDataSet.xsc">
+      <DependentUpon>PeliculasDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PeliculasDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PeliculasDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PeliculasDbDataSet.xss">
+      <DependentUpon>PeliculasDbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,10 +178,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-    <Folder Include="Entidades\" />
-    <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Registros\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>
